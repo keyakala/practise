@@ -35,7 +35,7 @@ if uploaded_file is not None:
     target_column = st.selectbox("Select Target Column", data.columns)
 
     if st.button("Run Naive Bayes"):
-        X = data.drop(columns=[target_column])
+        X = data.drop(columns=[target_column,"Id"])
         y = data[target_column]
 
         accuracy, cm = naive_bayes(X, y)
