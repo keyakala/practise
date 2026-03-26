@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 
 # ---- YOUR FUNCTION (UNCHANGED) ----
 def naive_bayes(X,y):
-  X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.3,random_state=1)
+  X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=1)
   GNB=GaussianNB()
 
   GNB.fit(X_train,y_train)
